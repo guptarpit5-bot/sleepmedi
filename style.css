@@ -36,9 +36,8 @@ body {
 
 .top img {
     width: 100%;
-    height: 420px;
+    height: auto;
     display: block;
-    object-fit: cover;
 }
 
 .top button {
@@ -203,11 +202,9 @@ body {
 
 /* Million Reviews Section */
 .million-section {
-    padding: 80px 0;
+    padding: 80px 40px;
     text-align: center;
-    width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
+    max-width: 1200px;
     margin: 40px auto 80px auto;
 }
 
@@ -217,62 +214,22 @@ body {
     color: var(--text-main);
     margin-bottom: 48px;
     letter-spacing: -0.5px;
-    padding: 0 20px;
 }
 
-.marquee-container {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-    padding: 10px 0 30px 0;
-}
-
-/* Beautiful fading gradient masks for premium marquee look */
-.marquee-container::before,
-.marquee-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 15%;
-    max-width: 150px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.marquee-container::before {
-    left: 0;
-    background: linear-gradient(to right, #f8fafc 0%, rgba(248, 250, 252, 0) 100%);
-}
-
-.marquee-container::after {
-    right: 0;
-    background: linear-gradient(to left, #f8fafc 0%, rgba(248, 250, 252, 0) 100%);
-}
-
-.marquee-track {
+.million-row {
     display: flex;
-    width: max-content;
-    animation: marquee-scroll 30s linear infinite;
-}
-
-.marquee-track:hover {
-    animation-play-state: paused;
-}
-
-.marquee-group {
-    display: flex;
+    flex-direction: row;
+    justify-content: center;
     gap: 20px;
-    padding-right: 20px; /* Space between duplicate groups */
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
 
-@keyframes marquee-scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+.million-row::-webkit-scrollbar {
+    display: none;
 }
 
 .million-box {
@@ -470,6 +427,12 @@ body {
 }
 
 /* General Responsiveness */
+@media (max-width: 1100px) {
+    .million-row {
+        justify-content: flex-start;
+    }
+}
+
 @media (max-width: 900px) {
     .main-container {
         flex-direction: column;
@@ -486,21 +449,17 @@ body {
     
     .top button {
         left: 50%;
+        top: 80%;
     }
 }
 
 @media (max-width: 768px) {
-    .top img {
-        height: 280px; /* Beautifully scale the image down to prevent extreme crop/height on phone */
-    }
-    
     .top button {
-        top: 80%;
-        left: 50%;
         padding: 12px 28px;
         font-size: 0.95rem;
+        top: 75%;
     }
-    
+
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -510,17 +469,5 @@ body {
     .footer-simple-links {
         justify-content: center;
         gap: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .top img {
-        height: 220px; /* Perfectly fits the aspect ratio on smaller mobile screens */
-    }
-    
-    .top button {
-        top: 78%;
-        padding: 10px 24px;
-        font-size: 0.85rem;
     }
 }
