@@ -442,6 +442,10 @@ body {
         top: 80%;
     }
 }
+.music
+{
+    display: none;
+}
 
 @media (max-width: 768px) {
     .top button {
