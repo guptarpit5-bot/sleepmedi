@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https:
 
 :root {
     --bg-light: #ffffff;
@@ -28,7 +28,7 @@ body {
     line-height: 1.5;
 }
 
-/* Hero Section */
+
 .top {
     position: relative;
     width: 100%;
@@ -65,7 +65,7 @@ body {
     box-shadow: 0 15px 35px rgba(99, 102, 241, 0.3);
 }
 
-/* Content Container */
+
 .main-container {
     display: flex;
     justify-content: space-between;
@@ -77,7 +77,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Image Wrapper and Animation */
 .image-wrapper {
     flex: 1;
     min-width: 320px;
@@ -102,7 +101,7 @@ body {
     border-color: rgba(99, 102, 241, 0.2);
 }
 
-/* Table Wrapper and Card Styles */
+
 .table-wrapper {
     flex: 1.2;
     min-width: 350px;
@@ -120,7 +119,7 @@ body {
     transform: translateY(-4px);
 }
 
-/* Features Table styling */
+
 .features-table {
     width: 100%;
     border-collapse: collapse;
@@ -141,7 +140,7 @@ body {
     padding-bottom: 0;
 }
 
-/* Emojis cell styling */
+
 .icon-cell {
     width: 64px;
     vertical-align: middle;
@@ -169,7 +168,7 @@ body {
     box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
 }
 
-/* Text cells styling */
+
 .text-cell {
     padding-left: 24px;
     vertical-align: middle;
@@ -200,7 +199,7 @@ body {
     width: 64px;
 }
 
-/* Million Reviews Section */
+
 .million-section {
     padding: 80px 40px;
     text-align: center;
@@ -285,7 +284,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Trial Section */
+
 .trial-section {
     text-align: center;
     padding: 80px 20px;
@@ -329,7 +328,7 @@ body {
     box-shadow: 0 15px 35px rgba(99, 102, 241, 0.45);
 }
 
-/* FAQ Section */
+
 .faq-section {
     padding: 80px 24px;
     max-width: 900px;
@@ -379,7 +378,7 @@ body {
     color: var(--text-muted);
 }
 
-/* Footer Section */
+
 .main-footer {
     background: #0f172a;
     color: #ffffff;
@@ -426,7 +425,7 @@ body {
     margin: 0;
 }
 
-/* General Responsiveness */
+
 @media (max-width: 1100px) {
     .million-row {
         justify-content: flex-start;
